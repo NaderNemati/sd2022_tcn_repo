@@ -1,0 +1,20 @@
+# Training/Model config
+seq_len: 256          # frames per training window
+stride: 64            # sliding window stride
+batch_size: 32
+epochs: 30
+lr: 1.0e-3
+weight_decay: 1.0e-4
+huber_delta: 1.0      # Huber threshold in meters
+val_split: 0.2        # split within each phone if no explicit folds
+
+# TCN model
+tcn_channels: [64, 64, 64]
+tcn_kernel_size: 3
+tcn_dropout: 0.1
+
+# Features
+use_speed: true
+use_heading: true
+use_dt: true
+
